@@ -36,6 +36,21 @@ public class Employers {
         return this.department;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname (String surname) {
+        this.surname = surname;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public void setDepartment (int department) {
+        this.department = department;
+    }
 
     @Override
     public String toString() {

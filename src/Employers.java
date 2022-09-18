@@ -15,9 +15,6 @@ public class Employers {
         this.uId = uId;
     }
 
-    public int countTotal() {
-        int total [] = total[];
-    }
 
     public String getName () {
         return  this.name;
@@ -39,26 +36,10 @@ public class Employers {
         return this.department;
     }
 
+
     @Override
     public String toString() {
         return  this.name + " " + this.surname + " " + this.salary + " " + this.department + " "+ this.uId;
-    }
-
-    public int getuId() {
-        int uId[] = new int [9];
-        uId[0] = 1;
-        uId[1] = 2;
-        uId[2] = 3;
-        uId[3] = 4;
-        uId[4] = 5;
-        uId[5] = 6;
-        uId[6] = 7;
-        uId[7] = 8;
-        uId[8] = 9;
-        for (int i = 0; i < uId.length; i++) {
-
-        }
-        return this.uId;
     }
 
 }

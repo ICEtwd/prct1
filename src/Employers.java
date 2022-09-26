@@ -4,15 +4,18 @@ public class Employers {
     private String surname;
     private int salary;
     private int department;
-    private int uId;
+
+    private int id;
+
+    private static int counter = 1;
 
 
-    public Employers(String name, String surname, int salary, int department, int uId) {
+    public Employers(String name, String surname, int salary, int department) {
         this.name = name;
         this.surname = surname;
         this.salary = salary;
         this.department = department;
-        this.uId = uId;
+        this.id = counter++;
     }
 
 
@@ -28,20 +31,9 @@ public class Employers {
         return this.salary;
     }
 
-    public int getMaxSalary() {
-        return this.salary;
-    }
 
     public int getDepartment() {
         return this.department;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSurname (String surname) {
-        this.surname = surname;
     }
 
     public void setSalary(int salary) {
@@ -54,7 +46,7 @@ public class Employers {
 
     @Override
     public String toString() {
-        return  this.name + " " + this.surname + " " + this.salary + " " + this.department + " "+ this.uId;
+        return  this.name + " " + this.surname + " " + this.salary + " " + this.department + " " + this.id;
     }
 
 }

@@ -1,6 +1,6 @@
 public class Main {
 
-    public static Employers[] employer = new Employers[10];
+    private static Employers[] employer = new Employers[10];
 
     private static Employers maxCount() {
         Employers employers = employer[0];
@@ -26,14 +26,24 @@ public class Main {
         return employers;
     }
 
-    private static Employers totalCount() {
-        Employers salary = employer[0];
-        int totalSalary = salary.getSalary();
+    private static int totalCount() {
+        Employers employers = employer[0];
+        int totalSalary = employers.getSalary();
         int sum = 0;
         for (int i = 0; i < employer.length; i++) {
-            sum += salary.getSalary();
+            sum += employers.getSalary();
         }
-        return salary;
+        return sum;
+    }
+
+    private static int middleCount() {
+        Employers employers = employer[0];
+        int middleSalary = employers.getSalary();
+        int middle = 0;
+        for (int i = 0; i < employer.length; i++) {
+            middle += employers.getSalary() / employer.length;
+        }
+        return middle;
     }
 
     public static void main(String[] args) {
@@ -59,9 +69,22 @@ public class Main {
         employer[8] = dexter;
         employer[9] = kate;
 
+        System.out.println("john = " + john);
+        System.out.println("sarah = " + sarah);
+        System.out.println("tracy = " + tracy);
+        System.out.println("frank = " + frank);
+        System.out.println("david = " + david);
+        System.out.println("marcus = " + marcus);
+        System.out.println("lewis = " + lewis);
+        System.out.println("arthur = " + arthur);
+        System.out.println("dexter = " + dexter);
+        System.out.println("kate = " + kate);
+
         System.out.println(maxCount());
         System.out.println(minCount());
         System.out.println(totalCount());
+        System.out.println(middleCount());
+
 
     }
 }
